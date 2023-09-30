@@ -6,6 +6,13 @@
 @section('content')
     <form action="store-data" method="post" class="mt-4 p-4">
         @csrf
+        <div class="containat=r">
+            @if (session()->has('failure'))
+                <div class="alert alert-danger">
+                    {{ session()->get('failure') }}
+                </div>
+            @endif
+        </div>
         <div class="form-group m-3">
             <label for="name">Todo Name</label>
             <input type="text" class="form-control" name="name">
