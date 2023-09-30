@@ -39,7 +39,7 @@ class TodoController extends Controller
             ]);
         } catch (ValidationException $e) {
             session()->flash('failure', $e->getMessage());
-            return redirect("/edit/{$todo->id}");
+            return redirect("/edit/{$todo->id}")->withInput();
         }
         $data = request()->all();
         $todo->name = $data['name'];
@@ -64,7 +64,7 @@ class TodoController extends Controller
             ]);
         } catch (ValidationException $e) {
             session()->flash('failure', $e->getMessage());
-            return redirect('/create');
+            return redirect('/create')->withInput();
         }
 
         $data = request()->all();
