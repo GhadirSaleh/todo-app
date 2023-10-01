@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Todo;
-use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
 class TodoController extends Controller
