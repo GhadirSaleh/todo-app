@@ -8,7 +8,8 @@
             <ul class="list-group">
                 @foreach ($todos as $todo)
                     <li class="list-group-item"><a href="details/{{ $todo->id }}"
-                            style="color: cornflowerblue">{{ $todo->name }}</a></li>
+                            style="color: cornflowerblue">{{ $todo->name }}</a><a href="completed/{{ $todo->id }}"><span
+                                class="btn btn-primary">Mark as completed</span></a></li>
                 @endforeach
             </ul>
         </div>
